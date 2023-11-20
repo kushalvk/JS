@@ -3,10 +3,10 @@ let d = "kushal"
 console.log(typeof d);
 console.log(typeof (d));
 
-let valuinNumber5 = Number (d)
+let valuinNumber = Number (d)
 
-console.log(typeof valuinNumber5);
-console.log(valuinNumber5); // NaN
+console.log(typeof valuinNumber);
+console.log(valuinNumber); // NaN
 
 // "33" => 33
 // "33abc" => NaN
