@@ -41,3 +41,28 @@ console.log(typeof id); // symbol
 console.log(typeof anotherId); // symbol
 
 console.log(typeof myFunction); // function
+
+
+// **************************************************************
+
+// stack(primitive), heap(non-primitive)
+
+let myname = "kushal"
+
+let nickname = myname // it's take a copy of the proparty
+nickname = "vk"
+
+console.log(myname);
+console.log(nickname);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@sbi"
+}
+
+let userTwo = userOne // it's take a reference of the proparty
+
+userTwo.email = "kushal@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
