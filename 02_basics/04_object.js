@@ -30,7 +30,7 @@ const obj4 = {5: "a", 6: "b"}
 // const obj3 = {obj1, obj2} // obj1 and obj2 is count as one object (total two object)
 // const obj3 = Object.assign({}, obj1, obj2)
 const obj3 = {...obj1,...obj2} // cambine two object
-console.log(obj3);
+// console.log(obj3);
 
 const user = [
     {
@@ -47,10 +47,35 @@ const user = [
     },
 ]
 
-console.log(user[1].email); // vk@...
-console.log(tinderUser);
+// console.log(user[1].email); // vk@...
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser)); // all key in one array
-console.log(Object.values(tinderUser)); // all values in one array
-console.log(Object.entries(tinderUser)); // all key and object in particular array
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(Object.keys(tinderUser)); // all key in one array
+// console.log(Object.values(tinderUser)); // all values in one array
+// console.log(Object.entries(tinderUser)); // all key and object in particular array
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+const course = {
+    coursname: "js in hindi",
+    price: "999",
+    courseInstructor: "kushal"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course // change name
+
+console.log(instructor);
+
+// example of api's
+// {
+//     "name": "kushal",
+//     "courename": "js in hindi",
+//     "price": "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
