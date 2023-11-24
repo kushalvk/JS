@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learningt</title>
+    <style>
+        .bg-color{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-color">
+    <div>
+        <h1 id="title" class="heading">DOM learning on youtube <span style="display: none;">test text</span></h1>
+        <h2>lorem ipsum dolor sit.</h2>
+        <h2>lorem ipsum dolor sit.</h2>
+        <h2>lorem ipsum dolor sit.</h2>
+        <p>lorem ipsum dolor sit amet.</p>
+        <input type="password">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+/*
+
+ => we can parform DOM qury in browser
+
+document => for selecting a webpage
+
+document.getElementById('title') => that element id is title.
+
+document.getElementById('title').id => show id
+
+document.getElementById('title').ClassName => show class name
+
+document.getElementById('title').getAttribute('id') => for get partucular element
+
+document.getElementById('title').eetAttribute('id', 'test') => for change value of ant element (in this the id is change by test(overwrite))
+
+const title = document.getElementById('title') => store in variable
+title.style.backgrouncolor = 'green' => add a css
+title.style.padding = '15px'
+title.style.borderRadius = '15px'
+
+title.textContent => fatech all content wich can hide with class
+title.innertext => fatch that already see in webpage
+title.innerHTML => fatch html code in element
+
+document.getElementByClassName('heading') =>fatch that class name is 'heading'
+
+(querySelectore select ony a first element as you say in webpage)
+document.querySelectore('h2') => select query tag h2 in all webpage(first h2)
+document.querySelectore('#title') => select query id title in all webpage(first title)
+document.querySelectore('.heading') => select query class heading in all webpage(first heading)
+document.querySelectore('input[type="password"]') => select input tag that input element type password
+document.querySelectore('p:first-child') => for selecting paragraf tag
+
+document.querySelectore('ul') => slecting ul tag
+const myul = document.querySelectore('ul') => stor in variable
+myul.querySelectore('li') => selecting lu tag
+const turngreen = myul.querySelectore('li') => store in variable
+turngreen.style.backgruond = "green" => for add class
+turngreen.innerText = "five" => chnage the text 'one' to 'five'
+
+(querySelectoreAll select all query in webpage)
+document.querySelectorAll('li') => select all the li tag in webpage(it's give array but can't access map and forEach loop and any other array function)
+const tempLiList = document.querySelectorAll('li')
+tempLiList.style.color = 'green' =========> this can not be work
+tempLiList[0].style.color = 'green' => you can access a particular element
+
+document.getElementsByClassName('list-item') => (it's give array but can't access map and array function)
+const tempClassList = document.getElementsByClassName('list-item')
+const myCnvertedArray = Array.from(tempClassList) => it's convart in Array ( that can be access a function of array)
+myCnvertedArray.forEach(function(li){
+    li.style.color = 'orange', (multiple lines)
+    li.style.backgroundColor = 'green';
+    li.style.padding = '15px';
+})
+
+*/
