@@ -3,8 +3,8 @@
 ## projet link
 [click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
-```
-<!-- solution code -->
+```javascript
+console.log("kushal")
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
