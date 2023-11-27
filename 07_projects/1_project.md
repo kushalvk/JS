@@ -4,7 +4,6 @@
 [click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
 
 ## project 1
-
 ```javascript
 console.log("kushal")
 const buttons = document.querySelectorAll('.button');
@@ -37,4 +36,41 @@ buttons.forEach((button) => {
     }
   });
 });
+```
+
+## project 2 solution
+```javascript
+const form = document.querySelector('form');
+// this usecase will give you empty
+// const hight = parseInt(document.querySelector('#hight').value)
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const hight = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+
+  if (hight === '' || hight < 0 || isNaN(hight)){
+    results.innerHTML = `please give a valid hight ${hight}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)){
+    results.innerHTML = `please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((hight * hight)/10000)).toFixed(2)
+    // show the result
+    results.innerHTML = `<span>${bmi}</span>`
+  }
+  
+  const bmi = (weight / ((hight * hight)/10000)).toFixed(2)
+  const sugg = document.querySelector('#suggetion');
+  if ( bmi < 18.6){
+    sugg.innerHTML = 'under weight';
+  } else if ( bmi < 24.9)
+  {
+    sugg.innerHTML = 'normal range';
+  } else {
+    sugg.innerHTML = 'over weight';
+  }
+});
+
 ```
