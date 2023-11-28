@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body>
+    <ul id="image">
+        <li>
+            other image:
+            <img  src="image.jpg">
+        </li>
+        <li>
+            owl:
+            <img id="owl" src="owl.jpg">
+        </li>
+        <li><a href="https://google.com" id="google">google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function () {
+    //     alert("owl clicked")
+    // }
+
+    // type, timestamp, defaultprevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrkey, shiftkey, keyCode
+/*
+    document.getElementById('image').addEventListener('click', function(e){
+        console.log("click inside the UL");
+    }, false) // default (false => event prapogation)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        e.stopPropagation()
+    }, false)
+
+    document.getElementById('google').addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation(); // stop event prapogation
+        console.log("google clicked");
+    }, false)
+*/
+
+// click on image to remove
+const li = document.querySelector('#image').addEventListener('click', function(e){
+    console.log(e.target.parentNode);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+}, false)
+</script>
+</html>
