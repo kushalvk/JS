@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KUSHAL OR JS</h1>
+    <button id="state">state</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+    const intervalD = setInterval(sayDate, 1000, "HII..") // that will use to ran after each time(repeated time)
+    clearInterval(intervalD) // stop the exicution (repeated time)
+
+    
+    //start
+    const clickToStar = function (){
+        console.log("KUSHAL",Date.now());
+    }
+    let intervalVariable;
+
+    const state = document.querySelector('#state').addEventListener('click', function(){
+       intervalVariable = setInterval(clickToStar, 1000)
+    })
+    
+    // stop
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalVariable)
+    })
+</script>
+</html>
