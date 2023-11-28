@@ -182,3 +182,38 @@ function newGame(){
 }
 
 ```
+
+## project 5 solution
+
+```javascript
+
+// gerat a random color
+const randomColor = function(){
+  const hex = "0123456789ABCDEF"
+  let color = '#'
+  for (let i=0;i < 6; i++){
+    color += hex[Math.floor(Math.random() * 16)]
+  }
+  return color
+};
+
+let intavelID;
+
+const startChangingColor = function(){
+  if(!intavelID){ // (intarvelID == null) (for loop for better code)
+    intavelID = setInterval(chnageBhcolor, 1000);
+  }
+  
+  function chnageBhcolor(){
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function(){
+  clearInterval(intavelID)
+  intavelID = null; // to flast the variable (for beter code)
+};
+
+const strat = document.querySelector('#start').addEventListener('click', startChangingColor)
+const stop = document.querySelector('#stop').addEventListener('click', stopChangingColor)
+
+```
