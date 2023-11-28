@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KUSHAL</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const syaKushal = function(){
+        console.log("kushal");
+    }
+    const chnageMe1 = setTimeout(syaKushal, 2000)
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    const chnageMe2 = setTimeout(changeText, 2000) // code exicut after the time (2000 => 2 seconds)
+    // setInterval() => that will use to ran after each time(repeted time)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(chnageMe2) // stop the change if stop button press
+        console.log("STOPPED");
+    })
+</script>
+</html>
