@@ -12,6 +12,7 @@ const user = {
 // console.log(user.getUserDetails());
 // console.log(user.username);
 // console.log(this); // empty in global
+// this keyword is not access in 'aero function'
 
 function User(username, loginCont, isLoggedIn) {
     this.username = username;
