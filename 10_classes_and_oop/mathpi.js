@@ -19,7 +19,7 @@ console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
 Object.defineProperty(chai, 'name', {
     // writable: false,
-    enumerable: false // loops cannot be access on false enumerable (only name)
+    enumerable: false // loops cannot be access on false enumerable (only name) (if true then accessable)
 })
 console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
