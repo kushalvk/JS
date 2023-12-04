@@ -13,6 +13,7 @@
 4	DONE	The operation is complete.
     <button id="show"> SHOW </button>
     <p id="follow"></p>
+    <img id="photo">
 </body>
 <script>
     // the data in api is "string" in most of the time
@@ -30,10 +31,12 @@
     }
     xhr.send()
 
-    //photo
-    
-    
-    // followers
-    
+    // show details on click the show button
+    const showfollowing = document.querySelector('#follow');
+
+    document.querySelector('#show').onclick = () => {
+        showfollowing.innerHTML = `following is : ${data.following}`;
+        document.querySelector('#photo').src = data.avatar_url;
+    }
 </script>
 </html>
